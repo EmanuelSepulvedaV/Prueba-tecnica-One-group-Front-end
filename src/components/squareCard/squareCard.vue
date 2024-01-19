@@ -37,6 +37,14 @@ onMounted(async () => {
     });
 });
 
+const deleteVideo = async (item) => {
+  const response = await axios.delete("http://localhost:9000/api/v1/upload/deleteVideo?dir=" + item.linkvideo);
+  if (response?.data?.success) {
+    auxVideoTotal.value = auxVideoTotal.value.filter((e) => e.linkvideo != item.linkvideo);
+    videoBack.value = auxVideoTotal.value;
+  }
+};
+
 const getVideo = async (item) => {
   videosload.value.push("http://localhost:9000/api/v1/upload/getVideosMedia?linkvideo=" + item.linkvideo);
 };
@@ -48,7 +56,7 @@ const newPage = (item) => {
 
 <template>
   <div class="squareCard__container" v-if="!loading">
-    <section @click="newPage(item)" class="squareCard" v-for="(item, index) of videoBack" :key="index">
+    <section class="squareCard" v-for="(item, index) of videoBack" :key="index">
       <video :poster="videosload[index]" class="squareCard__img" width="320" height="240" controls alt="Arte IA">
         <source :src="videosload[index]" type="video/mp4" />
         Tu navegador no soporta el tag de video.
@@ -59,7 +67,8 @@ const newPage = (item) => {
           <p class="squareCard__description-name">{{ item.name }}</p>
         </div>
       </div>
-      <button class="squareCard__description-link">Ver Video</button>
+      <button class="squareCard__description-link" @click="newPage(item)">Ver Video</button>
+      <button class="squareCard__description-link" @click="deleteVideo(item)">Eliminar</button>
     </section>
 
     <button class="squareCard__container-btn" v-if="!videoBack.length" @click="$router.push('/sendandreceivevideos')">Sube un nuevo video</button>
@@ -85,9 +94,7 @@ const newPage = (item) => {
     flex-wrap: wrap;
     gap: 40px;
     width: fit-content;
-    @media screen and (max-width: 1024px) {
-      justify-content: center;
-    }
+
     @media screen and (max-width: 592px) {
       justify-content: start;
       gap: 20px;

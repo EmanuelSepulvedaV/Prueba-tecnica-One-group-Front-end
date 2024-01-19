@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
+import router from "@/routes";
 import axios from "axios";
 import Menu from "../menu/menu.vue";
 
@@ -18,6 +19,7 @@ const uploadVideo = () => {
     })
     .then((response) => {
       loading.value = false;
+      router.push("/");
     })
     .catch((error) => {
       console.error("Error al subir el video:", error);
