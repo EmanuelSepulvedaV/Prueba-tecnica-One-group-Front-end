@@ -21,12 +21,16 @@
   position: relative;
   box-shadow: 5px 10px 10px 0px rgba(107, 107, 107, 0.75);
   border-radius: 20px;
-  @media screen and (max-width: 1024px) {
-    width: 80%;
-  }
-  @media screen and (max-width: 592px) {
-    width: 100%;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   width: 80%;
+  // }
+
+  @include mediaResolucion(1024px, 80%);
+  @include mediaResolucion(592px, 100%);
+
+  // @media screen and (max-width: 592px) {
+  //   width: 100%;
+  // }
 
   &__text {
     @include columnCenter;
@@ -36,9 +40,10 @@
     position: absolute;
     padding: 10px;
 
-    @media screen and (max-width: 459px) {
-      width: 70%;
-    }
+    // @media screen and (max-width: 459px) {
+    //   width: 70%;
+    // }
+    @include mediaResolucion(459px, 70%);
 
     p {
       font-size: 25px;

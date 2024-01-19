@@ -1,6 +1,7 @@
-// Ejemplo de definición de la variable en un ámbito global
 $primary-color: #dfdede;
 $second-color: #427ac9;
+
+//mixin
 @mixin flexColumn() {
   display: flex;
   flex-direction: column;
@@ -21,4 +22,10 @@ $second-color: #427ac9;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin mediaResolucion($ancho-maximo, $ancho-deseado) {
+  @media screen and (max-width: $ancho-maximo) {
+    width: $ancho-deseado;
+  }
 }

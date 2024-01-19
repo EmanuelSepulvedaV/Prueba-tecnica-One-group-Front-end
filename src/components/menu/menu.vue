@@ -1,6 +1,6 @@
 <script setup>
 import router from "@/routes";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 const optionsMenu = [{ icon: "fa-solid fa-house" }, { icon: "fa-solid fa-cloud" }];
 
 let selectedIndex = ref(null);
@@ -10,10 +10,8 @@ const selectIcon = (index) => {
   if (index == 1) router.push("/sendandreceivevideos");
   if (index == 0) router.push("/");
 };
-
-
 </script>
-<!-- { icon: "fa-solid fa-heart" }, { icon: "fa-solid fa-rocket" } -->
+
 <template>
   <div class="viewMenu__wrapper">
     <div class="viewMenu__menu-container">

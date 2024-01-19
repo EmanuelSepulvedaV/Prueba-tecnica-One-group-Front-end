@@ -44,7 +44,6 @@ const search = ($event) => {
   &__dashboard {
     width: 100vw;
     height: 100vh;
-    // width: fit-content;
     margin-left: 30px;
     @media screen and (max-width: 592px) {
       margin-left: 10px;

@@ -11,15 +11,12 @@ const route = useRoute();
 
 <style lang="scss">
 .mainApp {
-  // width: 100vw;
-  // height: 100vh;
-  // overflow: hidden;
   margin: 0%;
   padding: 0%;
-  
+
   &__buttons {
     display: flex;
-      background: linear-gradient(to top right, #e6d6d2, #efeeee);
+    background: linear-gradient(to top right, #e6d6d2, #efeeee);
   }
 }
 </style>

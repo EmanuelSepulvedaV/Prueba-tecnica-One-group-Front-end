@@ -2,7 +2,6 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 import Menu from "../menu/menu.vue";
-import Header from "../header/header.vue";
 
 const loading = ref(false);
 
@@ -39,7 +38,7 @@ const uploadVideo = () => {
             <input type="text" name="name" placeholder="Nombre del Video" />
             <input type="file" id="videoFile" name="video" accept=".mp4" />
             <button type="submit">Subir Video</button>
-            <i  @click="$router.push('/')">Ver Video</i>
+            <i @click="$router.push('/')">Ver Video</i>
           </form>
         </div>
       </div>

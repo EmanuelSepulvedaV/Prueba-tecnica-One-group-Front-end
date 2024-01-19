@@ -9,8 +9,6 @@ const selectIcon = (index) => {
   selectedIndex.value = index;
 };
 
-// aJUSTE DE RESOLUCION
-
 onMounted(() => {
   handleResize();
   window.addEventListener("resize", handleResize);
@@ -72,14 +70,11 @@ const searchFunction = (index) => {
   @include flexRow;
   width: 100%;
   height: 70px;
-  //   background-color: #000;
-  // padding-left: 30px;
+
   z-index: 10;
   margin-top: 5px;
   margin-bottom: 5px;
 
-  &__responsive {
-  }
   &__buttons {
     display: flex;
     flex-direction: row;

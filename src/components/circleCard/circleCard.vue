@@ -25,12 +25,9 @@ const srcImg = [img1, img2, img3, img4, img5, img6, img7];
 
 <style lang="scss">
 .CircleCards {
-  // width: 55%;
   width: fit-content;
   margin-top: 10px;
   margin-bottom: 10px;
-  @media screen and (max-width: 1024px) {
-  }
 
   &__tittle {
     p {
@@ -41,14 +38,12 @@ const srcImg = [img1, img2, img3, img4, img5, img6, img7];
   }
   &__cards {
     @include flexCenter();
-    // height: 70px;
     padding: 5px;
     border-radius: 100%;
     outline: #dab0c8 solid;
- 
+
     &-container {
       @include flexRow;
-      // width: 100%;
       width: fit-content;
       gap: 30px;
       margin-top: 10px;
@@ -63,11 +58,6 @@ const srcImg = [img1, img2, img3, img4, img5, img6, img7];
       object-fit: cover;
       border-radius: 100%;
       cursor: pointer;
-    //   @media screen and (max-width: 1024px) {
-    //     width: 40px;
-    //   height: 40px;
-    // }
-
     }
   }
 }

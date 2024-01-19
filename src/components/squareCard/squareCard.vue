@@ -7,7 +7,7 @@ let searchText = ref("");
 const videoBack = ref([]);
 let videosload = ref([]);
 let loading = ref(true);
-let videoNewPage = ref();
+
 const changeCards = () => {
   let coincidence = auxVideoTotal.value.filter((x) => x.name.includes(searchText.value));
   videoBack.value = coincidence;
@@ -42,8 +42,6 @@ const getVideo = async (item) => {
 };
 
 const newPage = (item) => {
-  console.log(item);
-
   window.open("http://localhost:9000/api/v1/upload/getVideosMedia?linkvideo=" + item.linkvideo, "_blank");
 };
 </script>
@@ -98,13 +96,13 @@ const newPage = (item) => {
       @include flexCenter;
       width: 200px;
       height: 30px;
-      background-color:$second-color ;
-      color: #fff ;
+      background-color: $second-color;
+      color: #fff;
       border: none;
-      border-radius: 5px ;
+      border-radius: 5px;
       cursor: pointer;
       box-shadow: 5px 1px 5px 5px rgba(210, 210, 210, 0.75);
-      }
+    }
   }
   &__img {
     width: 90%;
@@ -113,11 +111,6 @@ const newPage = (item) => {
     min-height: 150px;
     border-radius: 10px;
     object-fit: cover;
-
-    &-text {
-      p {
-      }
-    }
   }
   &__description {
     width: 100%;
