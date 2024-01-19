@@ -59,7 +59,7 @@ const search = ($event) => {
     &-cards {
       margin-left: 100px;
       @media screen and (max-width: 1024px) {
-        @include flexColumn;
+        // @include flexColumn;
         width: 100%;
         margin-left: 0px;
       }

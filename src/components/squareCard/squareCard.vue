@@ -98,6 +98,8 @@ const newPage = (item) => {
     @media screen and (max-width: 592px) {
       justify-content: start;
       gap: 20px;
+      height: 60%;
+
     }
     &-btn {
       @include flexCenter;

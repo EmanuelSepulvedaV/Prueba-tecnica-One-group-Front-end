@@ -111,6 +111,9 @@ const searchFunction = (index) => {
       border-radius: 5px;
       font-size: 13px;
       box-shadow: 5px 5px 5px 5px rgba(201, 199, 199, 0.75);
+      @media screen and (max-width: 560px) {
+        min-width: 140px;
+      }
     }
     &-input {
       align-items: center;

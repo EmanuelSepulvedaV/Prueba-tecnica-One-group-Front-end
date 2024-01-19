@@ -62,7 +62,7 @@ const selectIcon = (index) => {
       height: 50px;
       margin-top: 10px;
     }
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 560px) {
       width: 100%;
       border-radius: 0px;
     }
@@ -84,10 +84,12 @@ const selectIcon = (index) => {
       background-color: #fff;
       border-radius: 20px;
       @media screen and (max-width: 590px) {
+        width: 100%;
         border-radius: 0px;
       }
 
       @media screen and (max-width: 1024px) {
+        justify-content: center;
         flex-direction: row;
         width: 100%;
         padding: 3px;
@@ -147,6 +149,10 @@ const selectIcon = (index) => {
       height: 50px;
       cursor: pointer;
       color: #8d8989;
+
+      @media screen and (max-width: 1024px) { 
+        width: 100px;
+      }
     }
   }
 }
