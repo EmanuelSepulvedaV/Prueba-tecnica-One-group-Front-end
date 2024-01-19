@@ -7,10 +7,10 @@ import Menu from "../menu/menu.vue";
 const loading = ref(false);
 
 const uploadVideo = () => {
-  loading.value = true;
   const form = document.getElementById("videoForm");
   const formData = new FormData(form);
-
+  if (!formData.get("name").replace(/\s/g, "") || !formData.get("video").size) return;
+  loading.value = true;
   axios
     .post("http://localhost:9000/api/v1/upload", formData, {
       headers: {
