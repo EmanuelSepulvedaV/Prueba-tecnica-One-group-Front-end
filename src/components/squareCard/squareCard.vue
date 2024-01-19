@@ -68,7 +68,7 @@ const newPage = (item) => {
         </div>
       </div>
       <button class="squareCard__description-link" @click="newPage(item)">Ver Video</button>
-      <button class="squareCard__description-link" @click="deleteVideo(item)">Eliminar</button>
+      <button class="squareCard__description-delete" @click="deleteVideo(item)">Eliminar</button>
     </section>
 
     <button class="squareCard__container-btn" v-if="!videoBack.length" @click="$router.push('/sendandreceivevideos')">Sube un nuevo video</button>
@@ -130,14 +130,18 @@ const newPage = (item) => {
       font-size: 13px;
       text-overflow: ellipsis;
     }
-    &-link {
+    &-link,   &-delete {
       border: none;
-      margin-top: 10px;
+      margin-top: 5px;
       background-color: $second-color;
       color: #fff;
       width: 100px;
-      height: 30px;
+      height: 35px;
       border-radius: 5px;
+      cursor: pointer;
+    }
+    &-delete {
+      background-color: rgb(213, 36, 36);
     }
   }
 }
