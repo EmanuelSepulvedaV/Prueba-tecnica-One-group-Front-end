@@ -40,6 +40,7 @@
     margin-top: 10px;
   }
   @media screen and (max-width: 410px) {
+    
     }
 
   &__card {
