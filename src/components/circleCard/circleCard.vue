@@ -28,6 +28,9 @@ const srcImg = [img1, img2, img3, img4, img5, img6, img7];
   width: fit-content;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media screen and (max-width: 592px) {
+    width: 90%;
+  }
 
   &__tittle {
     p {

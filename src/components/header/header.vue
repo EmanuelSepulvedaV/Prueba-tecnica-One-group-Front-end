@@ -111,6 +111,9 @@ const searchFunction = (index) => {
       border-radius: 5px;
       font-size: 13px;
       box-shadow: 5px 5px 5px 5px rgba(201, 199, 199, 0.75);
+      @media screen and (max-width: 1024px) {
+        margin-left: 30px;
+      }
       @media screen and (max-width: 560px) {
         min-width: 140px;
       }
@@ -138,7 +141,7 @@ const searchFunction = (index) => {
       border: none;
       font-size: 20px;
       cursor: pointer;
-      background-color: #cbe8eb;
+      background-color: inherit;
     }
     &-img {
       width: 40px;

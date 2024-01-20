@@ -14,23 +14,16 @@
 
 <style lang="scss">
 .banner {
-  // width: 50%;
-  width: 650px;
+  // width: 650px;
   min-width: 150px;
   height: 250px;
   position: relative;
   box-shadow: 5px 10px 10px 0px rgba(107, 107, 107, 0.75);
   border-radius: 20px;
-  // @media screen and (max-width: 1024px) {
-  //   width: 80%;
-  // }
 
   @include mediaResolucion(1024px, 80%);
-  @include mediaResolucion(592px, 100%);
+  @include mediaResolucion(592px, 90%);
 
-  // @media screen and (max-width: 592px) {
-  //   width: 100%;
-  // }
 
   &__text {
     @include columnCenter;
@@ -39,10 +32,6 @@
     height: 100%;
     position: absolute;
     padding: 10px;
-
-    // @media screen and (max-width: 459px) {
-    //   width: 70%;
-    // }
     @include mediaResolucion(459px, 70%);
 
     p {

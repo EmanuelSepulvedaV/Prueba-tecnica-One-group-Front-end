@@ -16,7 +16,7 @@ const route = useRoute();
 
   &__buttons {
     display: flex;
-    background: linear-gradient(to top right, #e6d6d2, #efeeee);
+    background: linear-gradient(to top right, #d9cac6, #efeeee);
   }
 }
 </style>

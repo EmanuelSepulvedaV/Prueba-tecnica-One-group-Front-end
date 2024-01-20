@@ -99,7 +99,6 @@ const newPage = (item) => {
       justify-content: start;
       gap: 20px;
       height: 60%;
-
     }
     &-btn {
       @include flexCenter;
@@ -132,7 +131,8 @@ const newPage = (item) => {
       font-size: 13px;
       text-overflow: ellipsis;
     }
-    &-link,   &-delete {
+    &-link,
+    &-delete {
       border: none;
       margin-top: 5px;
       background-color: $second-color;
